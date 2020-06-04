@@ -13,56 +13,77 @@ button {
     color: #fff;
     background-color: #025157;
 }
-<<<<<<< HEAD
-.header {
-    height:45px;
-    margin-top: 40px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 0;
-  }
-  
-  .header > * {
-    display: inline-block;
-    font-size: 16px;
-  }
-  li {
-    display: inline;
-  }
-  .logo {
-    width: 15%;
-  }
-  
-  .menu {
-    width: 70%;
-  }
-  
-  .actions {
-    width: 15%;
-  }
-  .header > * {
-    display: inline-block;
-    font-size: 16px;
-    vertical-align: middle;
-    height: 100%;
-    line-height: 45px;
-  }
-  .logo > img {
-    height: 100%;
-  }
-  .menu {
-    width: 70%;
-    text-align: center;
-    color: #025157;
-    font-weight: 500;
-  }
-  
-  .actions {
-    width: 15%;
-    text-align: right;
-    font-size: 14px;
-    font-weight: 600;
-  }
-=======
 
->>>>>>> f6c6d1f9694a5e3ad0fb8f0de2cb75e6f6952114
+li {
+  display: inline;
+}
+
+.header {
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 0px;
+  height: 45px;
+  font-family: sans-serif;
+}
+
+.header > * {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+  height: 100%;
+  line-height: 45px;
+}
+
+.menu {
+  width: 70%;
+  text-align: center;
+  color: #025157;
+  font-weight: 500;
+}
+
+.menu > * {
+  display: inline-block;
+}
+
+.menu_item {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.actions {
+  width: 15%;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.actions > * {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.sign_in {
+  color: #67b54b;
+}
+
+.button_free_trial {
+  color: white;
+  background-color: #67b54b;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  border: 0px;
+  border-radius: 5px;
+}
+
+.logo {
+  width: 15%;
+  display: inline-block;
+}
+
+.logo > img {
+  height: 100%;
+}
