@@ -222,7 +222,44 @@ p {
   height: 100%;
 }
 
+.flexbox-postwork-case-studies {
+  display: flex;
+  width: 100%;
+  margin: 100px auto;
+  align-items: center;
+  background-color: #a1d683;
+}
 
+.publish-case-studies {
+  text-align: left;
+  display: block;
+  flex: 1;
+}
+
+.publish-case-studies > form {
+  display: flex;
+}
+
+.publish-case-studies > form button {
+  background-color: #025157;
+  color: white;
+  border-radius: 5px;
+}
+
+.imagen_compra_case_studies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  margin: 5px;
+}
+
+.imagen_compra_case_studies > form button {
+  background-color: #025157;
+  color: white;
+  border-radius: 5px;
+  flex-direction: column;
+}
 
 
 
