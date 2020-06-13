@@ -261,6 +261,46 @@ p {
   flex-direction: column;
 }
 
+.container-actions {
+  display: grid;
+  height: 650px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 600px;
+  grid-gap: 5px;
+  background-color: white;
+  color: grey;
+  align-content: center;
+  text-align: center;
+}
 
+.action-publish{
+  border: 2px solid green;
+}
+
+.action-publish > img {
+  height: 300px;
+}
+
+.action-promote {
+  border: 2px solid green;
+}
+
+.action-promote > img {
+  height: 300px;
+}
+.action-capture {
+  border: 2px solid green;
+}
+
+.action-capture > img {
+  height: 300px;
+}
+.action-measure {
+  border: 2px solid green;
+}
+
+.action-measure > img {
+  height: 300px;
+}
 
 
