@@ -1,15 +1,21 @@
 body {
   background-color: #fffbf7;
-  display: block;
-  text-align: center;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fffbf7;
 }
 
 .header {
-  height: 45px;
   margin-top: 40px;
   margin-left: 20px;
   margin-right: 20px;
   font-size: 0;
+  height: 45px;
   font-family: sans-serif;
 }
 
@@ -21,19 +27,11 @@ body {
   line-height: 45px;
 }
 
-.fixed-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #fffbf7;
-}
-
 .logo {
   width: 15%;
 }
 
-.logo >img {
+.logo > img {
   height: 100%;
 }
 
@@ -58,9 +56,9 @@ body {
 }
 
 .actions > * {
-  margin-right: 10px;
   margin-left: 10px;
-}
+  margin-right: 10px;
+} 
 
 .actions a {
   color: #67b54b;
@@ -69,9 +67,52 @@ body {
 .actions button {
   color: white;
   background-color: #67b54b;
-  padding: 12px 14px 12px 14px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-bottom: 12px;
+  padding-top: 12px;
   border: 0;
   border-radius: 5px;
+}
+
+@media (max-width: 575px) {
+  .navbar,
+  .actions {
+    display: none;
+  }
+  main {
+    margin-top: 130px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .banner > img {
+    width: 100%;
+  }
+  .promo {
+    flex-direction: column;
+    max-width: 90%;
+  }
+  .explanatory-video > video {
+    width: 100%;
+  }
+  .publish {
+    margin-top: 10px;
+  }
+  .publish > h3 {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+  .publish > form {
+    flex-direction: column;
+  }
+  .publish > form > div {
+    height: 100%;
+    margin-top: 10px;
+  }
+  .publish > form > div > input {
+    width: 100%;
+  }
 }
 
 main {
@@ -80,31 +121,22 @@ main {
 }
 
 h1 {
-  color: #025157;
-  font-family: "Alegreya", serif;
-  font-size: 60px;
-  margin-bottom: 24px;
+  color: #8b8b8bcc;
 }
 
 h4 {
   color: #46484c;
-  font-family: "Slabo 27px", serif;
-  font-size: 20px;
-  margin-bottom: 30px;
 }
 
-.email_submit {
-  height: 55px;
-}
-
-.button_capterra {
+button {
   color: #fff;
   background-color: #025157;
 }
 
-p {
-  color: #8b8b8bcc;
-  margin-top: 15px;
+figure.intro > img {
+  width: 70%;
+  vertical-align: middle;
+  border-style: none;
 }
 
 .promo {
@@ -114,22 +146,27 @@ p {
   align-items: center;
 }
 
-.publish {
-  text-align: left;
-  display: block;
+.explanatory-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex: 1;
 }
 
-.publish h3 {
+.publish {
+  flex: 1;
+}
+
+.publish h3{
+  color: #025157;
   font-family: "Alegreya", serif;
   font-size: 40px;
   line-height: 48px;
-  color: #025157;
 }
 
-.publish > p {
+.publish p {
+  color: #343434;
   font-size: 16px;
-  color: #343434 ;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -138,32 +175,20 @@ p {
   display: flex;
 }
 
-.publish > form button {
-  background-color: #025157;
-  color: white;
-  border-radius: 5px;
-}
-
-.explanatory-video {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-}
-
-.explanatory-video img {
-  width: 120px;
-  margin-top: 10px;
+.publish > form p {
+  color: #8b8b8bcc;
+  margin-right: 18px;
+  margin-top: 0;
 }
 
 .features {
-  display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   background-color: #025157;
   padding: 5% 10%;
+  display: grid;
+  grid-template: repeat(2, 330px) / repeat(2, 1fr);
 }
 
-.feature-card {
+.features .feature-card {
   margin-bottom: 30px;
   margin-left: 15px;
   margin-right: 15px;
@@ -222,85 +247,114 @@ p {
   height: 100%;
 }
 
-.flexbox-postwork-case-studies {
-  display: flex;
-  width: 100%;
-  margin: 100px auto;
-  align-items: center;
+.success-stories {
   background-color: #a1d683;
-}
-
-.publish-case-studies {
-  text-align: left;
-  display: block;
-  flex: 1;
-}
-
-.publish-case-studies > form {
+  padding: 5% 15%;
   display: flex;
-}
-
-.publish-case-studies > form button {
-  background-color: #025157;
-  color: white;
-  border-radius: 5px;
-}
-
-.imagen_compra_case_studies {
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+}
+
+.success-stories .overview {
+  flex: 2;
+  padding-right: 100px;
+}
+
+.success-stories .overview h2 {
+  font-family: "Alegreya", serif;
+  font-size: 51px;
+  line-height: 61px;
+  color: #025157;
+}
+
+.success-stories .overview p {
+  color: #343434;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.success-stories .overview button {
+  font-size: 14px;
+  padding: 12px 12px 6px 12px;
+  border-radius: 8px;
+  height: 45px;
+  font-weight: 600;
+  margin-left: 0;
+}
+
+figure {
+  margin-top: 32px;
+}
+
+.success-stories .stories-carousel {
   flex: 1;
-  margin: 5px;
+}
+.carousel {
+  position: relative;
+}
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel-item {
+  opacity: 0;
+  transition-property: opacity;
+  -webkit-transform: none;
+  transform: none;
+}
+.stories-carousel .card {
+  max-width: 370px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.stories-carousel .card .card-media {
+  position: relative;
+}
+.company {
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: #f9da73;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-body {
+  padding: 25px;
 }
 
-.imagen_compra_case_studies > form button {
-  background-color: #025157;
-  color: white;
-  border-radius: 5px;
-  flex-direction: column;
+.stories-carousel .card .card-body h4 {
+  color: #025157;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 12px;
 }
 
-.container-actions {
-  display: grid;
-  height: 650px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 600px;
-  grid-gap: 5px;
-  background-color: white;
-  color: grey;
-  align-content: center;
-  text-align: center;
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
 }
-
-.action-publish{
-  border: 2px solid green;
+.results {
+  display: flex;
+  align-items: center;
+  color: #828282;
 }
-
-.action-publish > img {
-  height: 300px;
+.success-stories .stories-carousel .card .card-footer {
+  margin-bottom: 20px;
+  background-color: unset;
+  border-top: unset;
 }
-
-.action-promote {
-  border: 2px solid green;
-}
-
-.action-promote > img {
-  height: 300px;
-}
-.action-capture {
-  border: 2px solid green;
-}
-
-.action-capture > img {
-  height: 300px;
-}
-.action-measure {
-  border: 2px solid green;
-}
-
-.action-measure > img {
-  height: 300px;
+.stories-carousel .card .card-media {
+  position: relative;
 }
 
 
